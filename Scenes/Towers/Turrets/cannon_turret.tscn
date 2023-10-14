@@ -8,3 +8,4 @@
 [node name="TurretBase" parent="." instance=ExtResource("1_d7wku")]
 
 [node name="TurretHead" parent="." instance=ExtResource("2_efvgg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.847985, 0)
