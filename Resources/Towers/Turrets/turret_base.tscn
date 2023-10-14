@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnmxpqakfr0cf"]
+
+[ext_resource type="PackedScene" uid="uid://btlbewmetx0hp" path="res://Assets/Models/Towers/TowerBase.glb" id="1_6kbl0"]
+
+[node name="TurretBase" instance=ExtResource("1_6kbl0")]

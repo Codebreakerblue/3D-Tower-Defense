@@ -13,3 +13,7 @@ config_version=5
 config/name="3D Tower Defense"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[filesystem]
+
+import/fbx/enabled=false

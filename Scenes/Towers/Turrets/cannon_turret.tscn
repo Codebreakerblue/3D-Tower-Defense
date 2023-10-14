@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://m3b7hbiob6hf"]
+
+[ext_resource type="PackedScene" uid="uid://cnmxpqakfr0cf" path="res://Resources/Towers/Turrets/turret_base.tscn" id="1_d7wku"]
+[ext_resource type="PackedScene" uid="uid://w6qf0fgvwy57" path="res://Resources/Towers/Turrets/cannon_turret_head.tscn" id="2_efvgg"]
+
+[node name="Cannon Turret" type="Node3D"]
+
+[node name="TurretBase" parent="." instance=ExtResource("1_d7wku")]
+
+[node name="TurretHead" parent="." instance=ExtResource("2_efvgg")]
