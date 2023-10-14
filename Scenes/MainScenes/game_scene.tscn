@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://4axi4rdyvk2q"]
+
+[ext_resource type="PackedScene" uid="uid://m3b7hbiob6hf" path="res://Scenes/Towers/Turrets/cannon_turret.tscn" id="1_ug5vu"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tobyu"]
+
+[sub_resource type="Sky" id="Sky_t65iq"]
+sky_material = SubResource("ProceduralSkyMaterial_tobyu")
+
+[sub_resource type="Environment" id="Environment_ldq81"]
+background_mode = 2
+sky = SubResource("Sky_t65iq")
+ambient_light_source = 3
+ambient_light_color = Color(0.635294, 0.862745, 1, 1)
+ambient_light_energy = 0.01
+reflected_light_source = 2
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+fog_density = 0.5945
+volumetric_fog_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_i07py"]
+size = Vector2(10, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_flf0d"]
+albedo_color = Color(0.533333, 0.533333, 0.533333, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_70d53"]
+radius = 0.1
+height = 0.2
+
+[node name="GameScene" type="Node3D"]
+
+[node name="SceneElements" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="SceneElements"]
+transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 5.83057, 4.82581, 5.83057)
+current = true
+fov = 20.0
+size = 3.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SceneElements"]
+transform = Transform3D(-0.707107, -0.494172, 0.505761, 0, 0.715254, 0.698865, -0.707107, 0.494172, -0.505761, 3, 2, -3)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SceneElements"]
+environment = SubResource("Environment_ldq81")
+
+[node name="GroundPlane" type="MeshInstance3D" parent="SceneElements"]
+mesh = SubResource("PlaneMesh_i07py")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_flf0d")
+
+[node name="CannonTurret" parent="." instance=ExtResource("1_ug5vu")]
+
+[node name="TestTarget" type="Node3D" parent="."]
+transform = Transform3D(0.998167, 0, -0.0605259, 0, 1, 0, 0.0605259, 0, 0.998167, 0.565194, 0.1, 2)
+
+[node name="TestTargetMesh" type="MeshInstance3D" parent="TestTarget"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.079844, 0)
+mesh = SubResource("SphereMesh_70d53")

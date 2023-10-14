@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="3D Tower Defense"
+run/main_scene="res://Scenes/MainScenes/game_scene.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [filesystem]
 
 import/fbx/enabled=false
+
+[rendering]
+
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=3
