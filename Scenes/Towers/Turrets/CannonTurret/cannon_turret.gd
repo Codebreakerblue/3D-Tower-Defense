@@ -3,7 +3,7 @@ extends Node3D
 var target
 
 func _ready():
-	target = $"../SceneElements/Path3D/TestTarget/AimPoint"
+	target = $"../SceneElements/TestTargetPath/TestTarget/AimPoint"
 	
 func _physics_process(delta):
 	turret_aim()

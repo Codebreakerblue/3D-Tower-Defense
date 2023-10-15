@@ -1,9 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://4axi4rdyvk2q"]
+[gd_scene load_steps=13 format=3 uid="uid://4axi4rdyvk2q"]
 
 [ext_resource type="Script" path="res://Scenes/MainScenes/test_target.gd" id="1_0ya0b"]
-[ext_resource type="PackedScene" uid="uid://m3b7hbiob6hf" path="res://Scenes/Towers/Turrets/cannon_turret.tscn" id="1_ug5vu"]
-[ext_resource type="PackedScene" uid="uid://y0vjedekjsse" path="res://Scenes/Towers/Turrets/laser_turret.tscn" id="3_f2vmr"]
-[ext_resource type="PackedScene" uid="uid://d1wqvtukp368o" path="res://Scenes/Towers/Turrets/gatling_turret.tscn" id="4_1uelm"]
+[ext_resource type="PackedScene" uid="uid://m3b7hbiob6hf" path="res://Scenes/Towers/Turrets/CannonTurret/cannon_turret.tscn" id="1_ug5vu"]
+[ext_resource type="PackedScene" uid="uid://cg6b8blsmbkr2" path="res://Scenes/Towers/Turrets/LaserTurret/laser_turret.tscn" id="3_f2vmr"]
+[ext_resource type="PackedScene" uid="uid://d1wqvtukp368o" path="res://Scenes/Towers/Turrets/GatlingTurret/gatling_turret.tscn" id="4_1uelm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tobyu"]
 
@@ -19,11 +19,11 @@ ambient_light_energy = 0.01
 reflected_light_source = 2
 ssao_enabled = true
 ssil_enabled = true
-fog_density = 0.5945
 volumetric_fog_enabled = true
+volumetric_fog_density = 0.03
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_i07py"]
-size = Vector2(10, 10)
+size = Vector2(50, 50)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_flf0d"]
 albedo_color = Color(0.533333, 0.533333, 0.533333, 1)
@@ -31,15 +31,21 @@ roughness = 0.65
 
 [sub_resource type="Curve3D" id="Curve3D_amt68"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.0612072, -3.69549e-05, 0.504705, 0, 0, 0, 0, 0, 0, -0.674394, -3.69549e-05, 1.15251, 0, 0, 0, 0, 0, 0, -1.60446, -3.69549e-05, 1.40709, 0, 0, 0, 0, 0, 0, -2.48859, -3.69549e-05, 1.48803, 0, 0, 0, 0, 0, 0, -2.96801, -3.69549e-05, 1.12069, 0, 0, 0, 0, 0, 0, -3.37894, -3.69549e-05, 0.298823, 0, 0, 0, 0, 0, 0, -3.44121, -3.69549e-05, -0.846806, 0, 0, 0, 0, 0, 0, -2.93688, -3.69549e-05, -1.45075, 0, 0, 0, 0, 0, 0, -2.23331, -3.69549e-05, -1.92395, 0, 0, 0, 0, 0, 0, -1.54843, -3.69549e-05, -1.88036, 0, 0, 0, 0, 0, 0, -0.639396, -3.69549e-05, -1.56282, 0, 0, 0, 0, 0, 0, -0.116391, -3.69549e-05, -1.19548, 0, 0, 0, 0, 0, 0, -0.047902, -3.69549e-05, -0.498137, 0, 0, 0, 0, 0, 0, -0.0653416, -3.69549e-05, 0.0639708),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+"points": PackedVector3Array(0.101862, 3.63798e-12, -0.503286, -0.101862, -3.63798e-12, 0.503286, 0.517518, -4.88311e-05, 1.97826, 0.191351, 3.63798e-12, -0.323402, -0.191351, -3.63798e-12, 0.323402, 0.0858294, -4.88311e-05, 3.12943, 0.350443, 3.63798e-12, 0.201287, -0.350443, -3.63798e-12, -0.201287, -1.1133, -4.88311e-05, 3.41722, 0.0559107, 3.63798e-12, 0.325286, -0.0559107, -3.63798e-12, -0.325286, -1.9527, -4.88311e-05, 2.57783, -0.248704, 3.63798e-12, 0.33378, 0.248704, -3.63798e-12, -0.33378, -1.6649, -4.88311e-05, 1.24679, -0.427111, 3.63798e-12, 0.151423, 0.427111, -3.63798e-12, -0.151423, 1.51012, -4.88311e-05, -1.29212, -0.23851, 3.63798e-12, -0.187479, 0.23851, -3.63798e-12, 0.187479, 2.59104, -4.88311e-05, -1.28357, -0.00226998, 3.63798e-12, -0.363148, 0.00226998, -3.63798e-12, 0.363148, 3.08787, -4.88311e-05, -0.42478, 0.343601, 3.63798e-12, -0.160937, -0.343601, -3.63798e-12, 0.160937, 2.68356, -4.88311e-05, 0.669751, 0.339786, 3.63798e-12, 0.0935647, -0.339786, -3.63798e-12, -0.0935647, 1.51894, -4.88311e-05, 0.655767, 0.422856, 3.63798e-12, 0.232421, -0.422856, -3.63798e-12, -0.232421, -1.73342, -4.88311e-05, -0.331399, 0.190454, 3.63798e-12, 0.445343, -0.190454, -3.63798e-12, -0.445343, -2.67652, -4.88311e-05, -1.16873, -0.362196, 0, 0.304215, 0.362196, 0, -0.304215, -2.313, 0, -2.479, -0.51302, 3.63798e-12, -0.127301, 0.51302, -3.63798e-12, 0.127301, -1.11366, -4.88311e-05, -2.68897, -0.118717, 0, -0.429933, 0.118717, 0, 0.429933, -0.427, 0, -1.989, 0.0955541, -3.63798e-12, -0.507483, -0.0955541, 3.63798e-12, 0.507483, 0.517518, -4.88311e-05, 1.97826),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
-point_count = 14
+point_count = 16
 up_vector_enabled = false
 
 [sub_resource type="SphereMesh" id="SphereMesh_70d53"]
 radius = 0.1
 height = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_303wj"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.211765, 0.301961, 0.113725, 1)
+roughness = 0.0
 
 [node name="GameScene" type="Node3D"]
 
@@ -55,6 +61,7 @@ far = 50.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SceneElements"]
 transform = Transform3D(-0.707107, -0.494172, 0.505761, 0, 0.715254, 0.698865, -0.707107, 0.494172, -0.505761, 3, 2, -3)
+light_energy = 2.0
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="SceneElements"]
@@ -65,25 +72,26 @@ mesh = SubResource("PlaneMesh_i07py")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_flf0d")
 
-[node name="Path3D" type="Path3D" parent="SceneElements"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.08741, 0.2, 0)
+[node name="TestTargetPath" type="Path3D" parent="SceneElements"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 curve = SubResource("Curve3D_amt68")
 
-[node name="TestTarget" type="PathFollow3D" parent="SceneElements/Path3D"]
-transform = Transform3D(-0.726243, 0, 0.687436, 0, 1, 0, -0.687436, 0, -0.726243, -0.0612072, -3.69549e-05, 0.504705)
+[node name="TestTarget" type="PathFollow3D" parent="SceneElements/TestTargetPath"]
+transform = Transform3D(-0.980125, -1.40543e-12, 0.198371, 0, 1, 7.08479e-12, -0.198371, 6.94401e-12, -0.980125, 0.517518, -4.88311e-05, 1.97826)
 script = ExtResource("1_0ya0b")
 
-[node name="TestTargetMesh" type="MeshInstance3D" parent="SceneElements/Path3D/TestTarget"]
+[node name="TestTargetMesh" type="MeshInstance3D" parent="SceneElements/TestTargetPath/TestTarget"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.079844, 0)
 mesh = SubResource("SphereMesh_70d53")
+surface_material_override/0 = SubResource("StandardMaterial3D_303wj")
 
-[node name="AimPoint" type="Node3D" parent="SceneElements/Path3D/TestTarget"]
+[node name="AimPoint" type="Node3D" parent="SceneElements/TestTargetPath/TestTarget"]
 
 [node name="CannonTurret" parent="." instance=ExtResource("1_ug5vu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.37682)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53428, 0, -1.57579)
 
 [node name="LaserTurret" parent="." instance=ExtResource("3_f2vmr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.36514, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98264, 2.38419e-07, -0.363514)
 
 [node name="GatlingTurret" parent="." instance=ExtResource("4_1uelm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.107326, 0.0181103, 0.0207715)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.773672, 0.0181103, 2.07829)

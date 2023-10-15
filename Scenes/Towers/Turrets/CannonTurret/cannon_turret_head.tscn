@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://w6qf0fgvwy57"]
+[gd_scene load_steps=3 format=3 uid="uid://w6qf0fgvwy57"]
 
 [ext_resource type="PackedScene" uid="uid://cos28yhyk7xiy" path="res://Assets/Models/Towers/CannonTurret/CannonTurret.glb" id="1_sv3pu"]
+[ext_resource type="Material" uid="uid://banubekxwwmqb" path="res://Resources/Materials/cannon_turret_cel.tres" id="2_w1jfx"]
 
 [node name="CannonTurret" instance=ExtResource("1_sv3pu")]
 
 [node name="Cannon Turret Head" parent="." index="0"]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+material_override = ExtResource("2_w1jfx")

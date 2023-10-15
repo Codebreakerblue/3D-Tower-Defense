@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://kjsijgf8f5ua"]
+
+[ext_resource type="PackedScene" uid="uid://b5bhceywob2dt" path="res://Assets/Models/Towers/LaserTurret/LaserTurretHead.glb" id="1_6gmqn"]
+[ext_resource type="Material" uid="uid://clf6ul6ncsrg" path="res://Resources/Materials/laser_turret_cel.tres" id="2_rl13t"]
+
+[node name="LaserTurretHead" instance=ExtResource("1_6gmqn")]
+
+[node name="Laser Turret Head Export" parent="." index="0"]
+material_override = ExtResource("2_rl13t")

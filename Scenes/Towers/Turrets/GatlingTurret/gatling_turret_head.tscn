@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf3dt5qn8wpco"]
+
+[ext_resource type="PackedScene" uid="uid://b7g48kxx04tjd" path="res://Assets/Models/Towers/GatlingTurret/GatlingTurretHead.glb" id="1_x5xkr"]
+[ext_resource type="Material" uid="uid://coddv1qn614f1" path="res://Resources/Materials/gatling_turret_cel.tres" id="2_mpka4"]
+
+[node name="GatlingTurretHead" instance=ExtResource("1_x5xkr")]
+
+[node name="Gatling Turret Body" parent="." index="0"]
+material_override = ExtResource("2_mpka4")
