@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=3 uid="uid://4axi4rdyvk2q"]
 
 [ext_resource type="Script" path="res://Scenes/MainScenes/test_target.gd" id="1_0ya0b"]
-[ext_resource type="PackedScene" uid="uid://m3b7hbiob6hf" path="res://Scenes/Towers/Turrets/cannon_turret.tscn" id="1_ug5vu"]
-[ext_resource type="PackedScene" uid="uid://y0vjedekjsse" path="res://Scenes/Towers/Turrets/laser_turret.tscn" id="3_f2vmr"]
-[ext_resource type="PackedScene" uid="uid://d1wqvtukp368o" path="res://Scenes/Towers/Turrets/gatling_turret.tscn" id="4_1uelm"]
+[ext_resource type="PackedScene" path="res://Scenes/Towers/Turrets/cannon_turret.tscn" id="1_ug5vu"]
+[ext_resource type="PackedScene" path="res://Scenes/Towers/Turrets/laser_turret.tscn" id="3_f2vmr"]
+[ext_resource type="PackedScene" path="res://Scenes/Towers/Turrets/gatling_turret.tscn" id="4_1uelm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tobyu"]
 
@@ -69,7 +69,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 curve = SubResource("Curve3D_amt68")
 
 [node name="TestTarget" type="PathFollow3D" parent="SceneElements/TestTargetPath"]
-transform = Transform3D(-0.726244, 0, 0.687434, 0, 1, 0, -0.687434, 0, -0.726244, 0, 0, 0)
+transform = Transform3D(-0.936327, 0, 0.351123, 0, 1, 0, -0.351123, 0, -0.936327, 0.517518, -4.88311e-05, 1.97826)
 script = ExtResource("1_0ya0b")
 
 [node name="TestTargetMesh" type="MeshInstance3D" parent="SceneElements/TestTargetPath/TestTarget"]

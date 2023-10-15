@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfxhvaksfqvtq"]
+
+[ext_resource type="Material" path="res://Resources/Materials/turret_shroud_cel.tres" id="2_20mk8"]
+
+[node name="TurretShroud"]
+
+[node name="Laser Turret Shroud" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_20mk8")
