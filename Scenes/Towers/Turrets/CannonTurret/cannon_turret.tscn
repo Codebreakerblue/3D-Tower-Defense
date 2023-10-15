@@ -1,13 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://m3b7hbiob6hf"]
+[gd_scene load_steps=5 format=3 uid="uid://m3b7hbiob6hf"]
 
 [ext_resource type="PackedScene" uid="uid://cnmxpqakfr0cf" path="res://Scenes/Towers/Turrets/Universal/turret_base.tscn" id="1_d7wku"]
-[ext_resource type="Script" path="res://Scenes/Towers/Turrets/CannonTurret/cannon_turret.gd" id="1_wmwsj"]
+[ext_resource type="Script" path="res://Scenes/Towers/Turrets/CannonTurret/turret.gd" id="1_wdik2"]
 [ext_resource type="PackedScene" uid="uid://w6qf0fgvwy57" path="res://Scenes/Towers/Turrets/CannonTurret/cannon_turret_head.tscn" id="2_efvgg"]
+[ext_resource type="PackedScene" uid="uid://doh2ytb0vvhiq" path="res://Resources/Components/aim_component.tscn" id="4_uge2m"]
 
 [node name="CannonTurret" type="Node3D"]
-script = ExtResource("1_wmwsj")
+script = ExtResource("1_wdik2")
 
 [node name="TurretBase" parent="." instance=ExtResource("1_d7wku")]
 
 [node name="TurretHead" parent="." instance=ExtResource("2_efvgg")]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0.9, 0)
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0.9, 0)
+
+[node name="AimComponent" parent="TurretHead" node_paths=PackedStringArray("target_provider") instance=ExtResource("4_uge2m")]
+target_provider = NodePath("../..")

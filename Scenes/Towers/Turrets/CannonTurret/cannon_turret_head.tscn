@@ -6,5 +6,4 @@
 [node name="CannonTurret" instance=ExtResource("1_sv3pu")]
 
 [node name="Cannon Turret Head" parent="." index="0"]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
 material_override = ExtResource("2_w1jfx")
