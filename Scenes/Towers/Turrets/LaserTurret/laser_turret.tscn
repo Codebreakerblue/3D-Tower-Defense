@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg6b8blsmbkr2"]
+
+[ext_resource type="Script" path="res://Scenes/Towers/Turrets/CannonTurret/cannon_turret.gd" id="1_rb1pw"]
+[ext_resource type="PackedScene" uid="uid://cnmxpqakfr0cf" path="res://Scenes/Towers/Turrets/Universal/turret_base.tscn" id="2_cjdb4"]
+[ext_resource type="PackedScene" uid="uid://c5tvqfyj2nosg" path="res://Scenes/Towers/Turrets/LaserTurret/laser_turret_head.tscn" id="3_fg150"]
+
+[node name="LaserTurret" type="Node3D"]
+script = ExtResource("1_rb1pw")
+
+[node name="TurretBase" parent="." instance=ExtResource("2_cjdb4")]
+
+[node name="TurretHead" parent="." instance=ExtResource("3_fg150")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.96626, 0)

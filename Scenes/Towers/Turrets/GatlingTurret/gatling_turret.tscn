@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1wqvtukp368o"]
+
+[ext_resource type="Script" path="res://Scenes/Towers/Turrets/CannonTurret/cannon_turret.gd" id="1_8uqmv"]
+[ext_resource type="PackedScene" uid="uid://cnmxpqakfr0cf" path="res://Scenes/Towers/Turrets/Universal/turret_base.tscn" id="2_v0mai"]
+[ext_resource type="PackedScene" uid="uid://cf3dt5qn8wpco" path="res://Scenes/Towers/Turrets/GatlingTurret/gatling_turret_head.tscn" id="3_8ftp1"]
+[ext_resource type="PackedScene" uid="uid://dgr1qyuold34r" path="res://Scenes/Towers/Turrets/GatlingTurret/gatling_turret_barrel.tscn" id="4_2b4kt"]
+[ext_resource type="Script" path="res://Scenes/Towers/Turrets/GatlingTurret/gatling_turret_barrel.gd" id="5_522j2"]
+
+[node name="GatlingTurret" type="Node3D"]
+script = ExtResource("1_8uqmv")
+
+[node name="TurretBase" parent="." instance=ExtResource("2_v0mai")]
+
+[node name="TurretHead" parent="." instance=ExtResource("3_8ftp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.847997, 0)
+
+[node name="GatlingTurretBarrel" parent="TurretHead" instance=ExtResource("4_2b4kt")]
+script = ExtResource("5_522j2")
