@@ -19,9 +19,8 @@ ambient_light_energy = 0.01
 reflected_light_source = 2
 ssao_enabled = true
 ssil_enabled = true
-fog_density = 0.5945
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.1
+volumetric_fog_density = 0.06
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_i07py"]
 size = Vector2(50, 50)
@@ -56,6 +55,7 @@ far = 50.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SceneElements"]
 transform = Transform3D(-0.707107, -0.494172, 0.505761, 0, 0.715254, 0.698865, -0.707107, 0.494172, -0.505761, 3, 2, -3)
+light_energy = 2.0
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="SceneElements"]

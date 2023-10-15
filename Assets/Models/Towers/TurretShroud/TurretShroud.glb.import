@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cy1cmghx4kvnv"
-path="res://.godot/imported/LaserTurret.glb-b865e55f87acf1f52add3751e4572dc7.scn"
+uid="uid://bj0k28di54a5p"
+path="res://.godot/imported/TurretShroud.glb-0506e4ff1d11ccf15722df0d02f2d3d1.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Towers/LaserTurret/LaserTurret.glb"
-dest_files=["res://.godot/imported/LaserTurret.glb-b865e55f87acf1f52add3751e4572dc7.scn"]
+source_file="res://Assets/Models/Towers/TurretShroud/TurretShroud.glb"
+dest_files=["res://.godot/imported/TurretShroud.glb-0506e4ff1d11ccf15722df0d02f2d3d1.scn"]
 
 [params]
 

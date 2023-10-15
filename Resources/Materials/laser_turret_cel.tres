@@ -3,5 +3,7 @@
 [resource]
 diffuse_mode = 3
 specular_mode = 1
-albedo_color = Color(0.25098, 0.27451, 0.321569, 1)
+albedo_color = Color(0.2, 0.219608, 0.231373, 1)
 roughness = 0.11
+clearcoat_enabled = true
+clearcoat_roughness = 1.0

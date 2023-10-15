@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://btlbewmetx0hp"
-path="res://.godot/imported/TowerBase.glb-1d38e524cc994c6faf17ce75b2e7596c.scn"
+uid="uid://b5bhceywob2dt"
+path="res://.godot/imported/LaserTurretHead.glb-ef1bc42dcdd8579d887a5820aadf288a.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Towers/TowerBase.glb"
-dest_files=["res://.godot/imported/TowerBase.glb-1d38e524cc994c6faf17ce75b2e7596c.scn"]
+source_file="res://Assets/Models/Towers/LaserTurret/LaserTurretHead.glb"
+dest_files=["res://.godot/imported/LaserTurretHead.glb-ef1bc42dcdd8579d887a5820aadf288a.scn"]
 
 [params]
 

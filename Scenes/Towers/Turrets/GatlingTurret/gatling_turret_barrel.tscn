@@ -1,5 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://dgr1qyuold34r"]
+[gd_scene load_steps=3 format=3 uid="uid://dgr1qyuold34r"]
 
 [ext_resource type="PackedScene" uid="uid://4o1mile5gkwu" path="res://Assets/Models/Towers/GatlingTurret/GatlingTurretBarrel.glb" id="1_gk71r"]
+[ext_resource type="Material" uid="uid://coddv1qn614f1" path="res://Resources/Materials/gatling_turret_cel.tres" id="2_80p1n"]
 
 [node name="GatlingTurretBarrel" instance=ExtResource("1_gk71r")]
+
+[node name="Gatling Turret Barrel" parent="." index="0"]
+material_override = ExtResource("2_80p1n")

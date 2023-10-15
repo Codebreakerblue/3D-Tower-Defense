@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwmsrwrvm8mas"]
+
+[ext_resource type="PackedScene" uid="uid://bj0k28di54a5p" path="res://Assets/Models/Towers/TurretShroud/TurretShroud.glb" id="1_6mgtv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qdy2d"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.0784314, 0.0862745, 0.0901961, 1)
+roughness = 0.14
+rim_enabled = true
+clearcoat_enabled = true
+clearcoat_roughness = 1.0
+
+[node name="TurretShroud" instance=ExtResource("1_6mgtv")]
+
+[node name="Laser Turret Shroud Export" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_qdy2d")

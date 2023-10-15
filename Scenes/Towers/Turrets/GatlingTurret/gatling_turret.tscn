@@ -12,7 +12,7 @@ script = ExtResource("1_8uqmv")
 [node name="TurretBase" parent="." instance=ExtResource("2_v0mai")]
 
 [node name="TurretHead" parent="." instance=ExtResource("3_8ftp1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.847997, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0)
 
 [node name="GatlingTurretBarrel" parent="TurretHead" instance=ExtResource("4_2b4kt")]
 script = ExtResource("5_522j2")
