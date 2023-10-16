@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://doh2ytb0vvhiq"]
 
-[ext_resource type="Script" path="res://Resources/Components/aim_component.gd" id="1_jrwih"]
+[ext_resource type="Script" path="res://Resources/Components/aim_lerp_component.gd" id="1_kfo55"]
 
 [node name="AimComponent" type="Node"]
 editor_description = "Component that aims parent at provided target."
-script = ExtResource("1_jrwih")
+script = ExtResource("1_kfo55")

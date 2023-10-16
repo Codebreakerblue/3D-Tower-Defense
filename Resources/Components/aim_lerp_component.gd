@@ -15,18 +15,20 @@ func _ready():
 	print(aim_position)
 
 
+
 func _physics_process(delta):
-	aim()
+	lerped_aim()
 	
 	
-func aim():
+func lerped_aim():
 	if target == null: 
 		pass
 	
 	var target_position = target.global_position
+	var aim_tween = create_tween()
 	parent.look_at(target_position, Vector3(0,1,0), true) ## looks at target position, using the default up vector, and using the model's own "forward" direction
-
-
+#	aim_tween.tween_method(look_at.bind(Vector3.UP),
+	
 func assign_aimed_target():
 	target = target_provider.target
 	
