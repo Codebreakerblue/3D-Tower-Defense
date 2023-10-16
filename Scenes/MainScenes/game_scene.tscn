@@ -46,7 +46,7 @@ roughness = 0.0
 [node name="SceneElements" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="SceneElements"]
-transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 8, 6.75, 8)
+transform = Transform3D(0.707107, -0.353553, 0.612373, 0, 0.866026, 0.5, -0.707107, -0.353553, 0.612373, 29.4584, 24.2707, 29.4584)
 projection = 1
 current = true
 fov = 25.0
@@ -95,7 +95,7 @@ script = ExtResource("1_0ya0b")
 speed = 4.0
 
 [node name="TestTargetMesh" type="MeshInstance3D" parent="TestMap/EnemyPath/TestEnemy"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.079844, 0)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 mesh = SubResource("SphereMesh_70d53")
 surface_material_override/0 = SubResource("StandardMaterial3D_303wj")
 
