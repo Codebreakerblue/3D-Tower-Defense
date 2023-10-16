@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddjllah1fe2e1"]
+
+[ext_resource type="PackedScene" uid="uid://ebo3xyc4xdi0" path="res://Assets/Models/MapGeometry/TestMap.glb" id="1_mekea"]
+[ext_resource type="Material" uid="uid://jcif0mpk78u" path="res://Resources/Materials/map_base_cel.tres" id="2_hkggi"]
+[ext_resource type="Material" uid="uid://edm71e86s2td" path="res://Resources/Materials/map_path_cel.tres" id="3_rcbrt"]
+
+[node name="TestMapGeo" instance=ExtResource("1_mekea")]
+
+[node name="Plane" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_hkggi")
+
+[node name="BezierCurve_001" parent="." index="1"]
+surface_material_override/0 = ExtResource("3_rcbrt")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd0yxngsq7pvu"]
+
+[ext_resource type="PackedScene" uid="uid://ddjllah1fe2e1" path="res://Scenes/Maps/TestMap/test_map_geo.tscn" id="1_00lgc"]
+
+[sub_resource type="Curve3D" id="Curve3D_kvxft"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 1, 0, 0, 15, -1, 0, 0, 1, 0, 0, 2, 0, 17, -1, 0, 0, 1, 0, 0, 12, 0, 17, 0, 0, 1, 0, 0, -1, 14, 0, 15, 0, 0, 0, 0, 0, 0, 14, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
+[node name="TestMap" type="Node3D"]
+
+[node name="MapGeo" parent="." instance=ExtResource("1_00lgc")]
+
+[node name="EnemyPath" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.650077, -10)
+curve = SubResource("Curve3D_kvxft")

@@ -1,6 +1,6 @@
 extends Node3D
 
-@onready var target = $/root/GameScene/SceneElements/TestTargetPath/TestTarget/AimPoint
+@onready var target = $"../TestMap/EnemyPath/TestEnemy"
 @onready var aim_component = $TurretHead/AimLerp3DComponent
 
 func _ready():

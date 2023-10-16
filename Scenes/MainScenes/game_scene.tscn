@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://4axi4rdyvk2q"]
+[gd_scene load_steps=12 format=3 uid="uid://4axi4rdyvk2q"]
 
 [ext_resource type="Script" path="res://Scenes/MainScenes/test_target.gd" id="1_0ya0b"]
 [ext_resource type="PackedScene" uid="uid://m3b7hbiob6hf" path="res://Scenes/Towers/Turrets/CannonTurret/cannon_turret.tscn" id="1_ug5vu"]
 [ext_resource type="PackedScene" uid="uid://cg6b8blsmbkr2" path="res://Scenes/Towers/Turrets/LaserTurret/laser_turret.tscn" id="3_f2vmr"]
 [ext_resource type="PackedScene" uid="uid://d1wqvtukp368o" path="res://Scenes/Towers/Turrets/GatlingTurret/gatling_turret.tscn" id="4_1uelm"]
+[ext_resource type="PackedScene" uid="uid://bd0yxngsq7pvu" path="res://Scenes/Maps/TestMap/test_map.tscn" id="5_3vek3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tobyu"]
 
@@ -21,13 +22,6 @@ ssao_enabled = true
 ssil_enabled = true
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.03
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_i07py"]
-size = Vector2(50, 50)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_flf0d"]
-albedo_color = Color(0.533333, 0.533333, 0.533333, 1)
-roughness = 0.65
 
 [sub_resource type="Curve3D" id="Curve3D_amt68"]
 _data = {
@@ -52,25 +46,21 @@ roughness = 0.0
 [node name="SceneElements" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="SceneElements"]
-transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 5.83057, 4.82581, 5.83057)
+transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 8, 6.75, 8)
 projection = 1
 current = true
 fov = 25.0
-size = 5.0
+size = 15.0
 far = 50.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SceneElements"]
-transform = Transform3D(-0.707107, -0.494172, 0.505761, 0, 0.715254, 0.698865, -0.707107, 0.494172, -0.505761, 3, 2, -3)
+transform = Transform3D(-0.707107, -0.466692, 0.531224, 0, 0.751264, 0.660002, -0.707107, 0.466692, -0.531224, 3, 2, -3)
 light_energy = 2.0
 shadow_enabled = true
+directional_shadow_pancake_size = 0.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="SceneElements"]
 environment = SubResource("Environment_ldq81")
-
-[node name="GroundPlane" type="MeshInstance3D" parent="SceneElements"]
-mesh = SubResource("PlaneMesh_i07py")
-skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_flf0d")
 
 [node name="TestTargetPath" type="Path3D" parent="SceneElements"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
@@ -79,7 +69,7 @@ curve = SubResource("Curve3D_amt68")
 [node name="TestTarget" type="PathFollow3D" parent="SceneElements/TestTargetPath"]
 transform = Transform3D(-0.980125, -1.40543e-12, 0.198371, 0, 1, 7.08479e-12, -0.198371, 6.94401e-12, -0.980125, 0.517518, -4.88311e-05, 1.97826)
 script = ExtResource("1_0ya0b")
-speed = 5.0
+speed = 1.0
 
 [node name="TestTargetMesh" type="MeshInstance3D" parent="SceneElements/TestTargetPath/TestTarget"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.079844, 0)
@@ -89,10 +79,26 @@ surface_material_override/0 = SubResource("StandardMaterial3D_303wj")
 [node name="AimPoint" type="Node3D" parent="SceneElements/TestTargetPath/TestTarget"]
 
 [node name="CannonTurret" parent="." instance=ExtResource("1_ug5vu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53428, 0, -1.57579)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.01003, 0, -8.57579)
 
 [node name="LaserTurret" parent="." instance=ExtResource("3_f2vmr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98264, 2.38419e-07, -0.363514)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -9)
 
 [node name="GatlingTurret" parent="." instance=ExtResource("4_1uelm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.773672, 0.0181103, 2.07829)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 5)
+
+[node name="TestMap" parent="." instance=ExtResource("5_3vek3")]
+
+[node name="TestEnemy" type="PathFollow3D" parent="TestMap/EnemyPath" index="0"]
+transform = Transform3D(-0.999998, 0, -8.74226e-08, 0, 1, 0, 8.74226e-08, 0, -0.999998, 0, 0, 0)
+script = ExtResource("1_0ya0b")
+speed = 4.0
+
+[node name="TestTargetMesh" type="MeshInstance3D" parent="TestMap/EnemyPath/TestEnemy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.079844, 0)
+mesh = SubResource("SphereMesh_70d53")
+surface_material_override/0 = SubResource("StandardMaterial3D_303wj")
+
+[node name="AimPoint" type="Node3D" parent="TestMap/EnemyPath/TestEnemy"]
+
+[editable path="TestMap"]
