@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1wqvtukp368o"]
+[gd_scene load_steps=8 format=3 uid="uid://d1wqvtukp368o"]
 
 [ext_resource type="Script" path="res://Scenes/Towers/Turrets/CannonTurret/turret.gd" id="1_ysml5"]
 [ext_resource type="PackedScene" uid="uid://cnmxpqakfr0cf" path="res://Scenes/Towers/Turrets/Universal/turret_base.tscn" id="2_v0mai"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dgr1qyuold34r" path="res://Scenes/Towers/Turrets/GatlingTurret/gatling_turret_barrel.tscn" id="4_2b4kt"]
 [ext_resource type="Script" path="res://Scenes/Towers/Turrets/GatlingTurret/gatling_turret_barrel.gd" id="5_522j2"]
 [ext_resource type="PackedScene" uid="uid://qktdpflgnkt4" path="res://Resources/Components/aim_lerp3D_component.tscn" id="6_b1yqn"]
+[ext_resource type="PackedScene" uid="uid://ct0f74wo2kujs" path="res://Resources/Components/fire_component.tscn" id="7_1lqos"]
 
 [node name="GatlingTurret" type="Node3D"]
 script = ExtResource("1_ysml5")
@@ -20,3 +21,5 @@ script = ExtResource("5_522j2")
 
 [node name="AimLerp3DComponent" parent="TurretHead" node_paths=PackedStringArray("target_provider") instance=ExtResource("6_b1yqn")]
 target_provider = NodePath("../..")
+
+[node name="FireComponent" parent="TurretHead" instance=ExtResource("7_1lqos")]

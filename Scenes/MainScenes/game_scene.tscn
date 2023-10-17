@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://4axi4rdyvk2q"]
+[gd_scene load_steps=13 format=3 uid="uid://4axi4rdyvk2q"]
 
 [ext_resource type="Script" path="res://Scenes/MainScenes/test_target.gd" id="1_0ya0b"]
 [ext_resource type="PackedScene" uid="uid://m3b7hbiob6hf" path="res://Scenes/Towers/Turrets/CannonTurret/cannon_turret.tscn" id="1_ug5vu"]
 [ext_resource type="PackedScene" uid="uid://cg6b8blsmbkr2" path="res://Scenes/Towers/Turrets/LaserTurret/laser_turret.tscn" id="3_f2vmr"]
+[ext_resource type="PackedScene" uid="uid://byo6jfbgao2sp" path="res://Scenes/Towers/Turrets/projectile.tscn" id="3_yluun"]
 [ext_resource type="PackedScene" uid="uid://d1wqvtukp368o" path="res://Scenes/Towers/Turrets/GatlingTurret/gatling_turret.tscn" id="4_1uelm"]
 [ext_resource type="PackedScene" uid="uid://bd0yxngsq7pvu" path="res://Scenes/Maps/TestMap/test_map.tscn" id="5_3vek3"]
 
@@ -81,11 +82,23 @@ surface_material_override/0 = SubResource("StandardMaterial3D_303wj")
 [node name="CannonTurret" parent="." instance=ExtResource("1_ug5vu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.01003, 0, -8.57579)
 
+[node name="FireComponent" parent="CannonTurret/TurretHead" index="2" node_paths=PackedStringArray("target_provider")]
+projectile_scene_1 = ExtResource("3_yluun")
+target_provider = NodePath("../..")
+
 [node name="LaserTurret" parent="." instance=ExtResource("3_f2vmr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -9)
 
+[node name="FireComponent" parent="LaserTurret/TurretHead" index="3" node_paths=PackedStringArray("target_provider")]
+projectile_scene_1 = ExtResource("3_yluun")
+target_provider = NodePath("../..")
+
 [node name="GatlingTurret" parent="." instance=ExtResource("4_1uelm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 5)
+
+[node name="FireComponent" parent="GatlingTurret/TurretHead" index="3" node_paths=PackedStringArray("target_provider")]
+projectile_scene_1 = ExtResource("3_yluun")
+target_provider = NodePath("../..")
 
 [node name="TestMap" parent="." instance=ExtResource("5_3vek3")]
 
@@ -101,4 +114,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_303wj")
 
 [node name="AimPoint" type="Node3D" parent="TestMap/EnemyPath/TestEnemy"]
 
+[editable path="CannonTurret"]
+[editable path="LaserTurret"]
+[editable path="GatlingTurret"]
 [editable path="TestMap"]
