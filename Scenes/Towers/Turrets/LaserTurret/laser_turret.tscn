@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cg6b8blsmbkr2"]
+[gd_scene load_steps=7 format=3 uid="uid://cg6b8blsmbkr2"]
 
 [ext_resource type="Script" path="res://Scenes/Towers/Turrets/CannonTurret/turret.gd" id="1_kuu4o"]
 [ext_resource type="PackedScene" uid="uid://cnmxpqakfr0cf" path="res://Scenes/Towers/Turrets/Universal/turret_base.tscn" id="2_cjdb4"]
 [ext_resource type="PackedScene" uid="uid://kjsijgf8f5ua" path="res://Scenes/Towers/Turrets/LaserTurret/laser_turret_head.tscn" id="3_fg150"]
 [ext_resource type="PackedScene" uid="uid://dwmsrwrvm8mas" path="res://Scenes/Towers/Turrets/Universal/turret_shroud.tscn" id="4_aislu"]
 [ext_resource type="PackedScene" uid="uid://qktdpflgnkt4" path="res://Resources/Components/aim_lerp3D_component.tscn" id="5_78rv0"]
+[ext_resource type="PackedScene" uid="uid://ct0f74wo2kujs" path="res://Resources/Components/fire_component.tscn" id="6_q1r2n"]
 
 [node name="LaserTurret" type="Node3D"]
 script = ExtResource("1_kuu4o")
@@ -16,5 +17,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="TurretShroud" parent="TurretHead" instance=ExtResource("4_aislu")]
 
+[node name="BarrelEnd" type="Node3D" parent="TurretHead"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.881748)
+
 [node name="AimLerp3DComponent" parent="TurretHead" node_paths=PackedStringArray("target_provider") instance=ExtResource("5_78rv0")]
 target_provider = NodePath("../..")
+
+[node name="FireComponent" parent="TurretHead" node_paths=PackedStringArray("target_provider", "fire_point") instance=ExtResource("6_q1r2n")]
+target_provider = NodePath("../..")
+fire_point = NodePath("..")
