@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://cg022hhyjsj73"]
+
+[ext_resource type="PackedScene" uid="uid://wvh23lfbbd5" path="res://Assets/Models/Enemies/TestTank.glb" id="1_7sa8f"]
+[ext_resource type="Material" uid="uid://cd5ki3sfl4d7g" path="res://Resources/Materials/Tank/TankGreen.tres" id="2_nvpuc"]
+[ext_resource type="Material" uid="uid://bx0xq3ovry6cn" path="res://Resources/Materials/Tank/TankLightGray.tres" id="3_k0spo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8spxi"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.203922, 0.203922, 0.203922, 1)
+roughness = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mwa4k"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.227451, 0.227451, 0.227451, 1)
+roughness = 0.0
+
+[node name="TestTank" instance=ExtResource("1_7sa8f")]
+
+[node name="Cube_001" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_8spxi")
+surface_material_override/1 = ExtResource("2_nvpuc")
+surface_material_override/2 = SubResource("StandardMaterial3D_mwa4k")
+surface_material_override/3 = ExtResource("3_k0spo")
+
+[node name="Cube_002" parent="." index="1"]
+surface_material_override/0 = ExtResource("2_nvpuc")
+surface_material_override/1 = ExtResource("3_k0spo")
+
+[node name="Cylinder" parent="." index="2"]
+surface_material_override/0 = ExtResource("2_nvpuc")
+surface_material_override/1 = ExtResource("3_k0spo")
+
+[node name="Cylinder_001" parent="." index="3"]
+surface_material_override/0 = ExtResource("2_nvpuc")

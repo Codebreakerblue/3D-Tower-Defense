@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv0u5jewnt5jr"]
+
+[ext_resource type="Script" path="res://Scenes/MainScenes/test_target.gd" id="1_c4jfu"]
+[ext_resource type="PackedScene" uid="uid://cg022hhyjsj73" path="res://Scenes/Enemies/TestTank/test_tank_geo.tscn" id="2_nc20y"]
+
+[node name="TestTank" type="PathFollow3D"]
+script = ExtResource("1_c4jfu")
+
+[node name="TestTankGeo" parent="." instance=ExtResource("2_nc20y")]

@@ -1,18 +1,21 @@
 extends Node
 
-var target #might be useless now
+var target 
 
 var ready_to_fire = true
-var rof = .1
 
 #Set using inspector
+@export var rof = .1
 @export var projectile_scene_1 : PackedScene	#what projectile to shoot
 @export var target_provider : Node	#what node is sending target information
-@export var fire_point : Node	#what point to spawn projectiles on
 @export var projectile_life = 1 #how long in seconds projectiles last before despawning
-
+@onready var fire_point = get_parent()	#what point to spawn projectiles on
 
 func _physics_process(delta):
+	if target == null:
+		if target_provider.target != null:
+			assign_aimed_target()
+	
 	fire()
 
 
@@ -32,5 +35,5 @@ func spawn_projectile(projectile_type):
 	await get_tree().create_timer(1).timeout
 	projectile.queue_free()
 
-func assign_aimed_target():	##might be useless now
+func assign_aimed_target():
 	target = target_provider.target

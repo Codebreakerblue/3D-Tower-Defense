@@ -5,10 +5,6 @@ extends Node
 @export var speed = 10
 
 
-func _ready():
-#	var forward = aimer.transform.basis.z
-#	projectile.look_at(target.position)
-	pass
 func move(delta):
 	var forward = -parent.transform.basis.z
 	parent.position += forward * speed * delta

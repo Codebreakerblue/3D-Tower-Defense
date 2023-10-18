@@ -1,11 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://4axi4rdyvk2q"]
+[gd_scene load_steps=13 format=3 uid="uid://dcfrquv8yobom"]
 
 [ext_resource type="Script" path="res://Scenes/MainScenes/test_target.gd" id="1_0ya0b"]
 [ext_resource type="PackedScene" uid="uid://m3b7hbiob6hf" path="res://Scenes/Towers/Turrets/CannonTurret/cannon_turret.tscn" id="1_ug5vu"]
-[ext_resource type="PackedScene" uid="uid://cg6b8blsmbkr2" path="res://Scenes/Towers/Turrets/LaserTurret/laser_turret.tscn" id="3_f2vmr"]
-[ext_resource type="PackedScene" uid="uid://byo6jfbgao2sp" path="res://Scenes/Towers/Turrets/projectile.tscn" id="3_yluun"]
+[ext_resource type="PackedScene" uid="uid://duj31fx3np48w" path="res://Scenes/Towers/Turrets/LaserTurret/laser_turret.tscn" id="3_f2vmr"]
 [ext_resource type="PackedScene" uid="uid://d1wqvtukp368o" path="res://Scenes/Towers/Turrets/GatlingTurret/gatling_turret.tscn" id="4_1uelm"]
 [ext_resource type="PackedScene" uid="uid://bd0yxngsq7pvu" path="res://Scenes/Maps/TestMap/test_map.tscn" id="5_3vek3"]
+[ext_resource type="PackedScene" uid="uid://bv0u5jewnt5jr" path="res://Scenes/Enemies/TestTank/test_tank.tscn" id="6_4kv1x"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tobyu"]
 ground_bottom_color = Color(0, 0, 0, 1)
@@ -23,6 +23,10 @@ ambient_light_energy = 0.01
 reflected_light_source = 2
 ssao_enabled = true
 ssil_enabled = true
+glow_enabled = true
+glow_normalized = true
+glow_mix = 0.366
+glow_blend_mode = 4
 fog_sun_scatter = 0.09
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.02
@@ -91,26 +95,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98997, 0, 5.42421)
 [node name="LaserTurret" parent="." instance=ExtResource("3_f2vmr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 5)
 
-[node name="FireComponent" parent="LaserTurret/TurretHead" index="4"]
-projectile_scene_1 = ExtResource("3_yluun")
-
 [node name="GatlingTurret" parent="." instance=ExtResource("4_1uelm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 19)
 
 [node name="TestMap" parent="." instance=ExtResource("5_3vek3")]
 
-[node name="TestEnemy" type="PathFollow3D" parent="TestMap/EnemyPath" index="0"]
-transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 0, 0, 0)
-script = ExtResource("1_0ya0b")
-speed = 4.0
+[node name="EnemyPath" parent="TestMap" index="1"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20, 0.169047, 3)
 
-[node name="TestTargetMesh" type="MeshInstance3D" parent="TestMap/EnemyPath/TestEnemy"]
-transform = Transform3D(3, 0, 2.84217e-14, 0, 3, 0, -2.84217e-14, 0, 3, 2.38419e-06, 0, 1.90735e-06)
-mesh = SubResource("SphereMesh_70d53")
-surface_material_override/0 = SubResource("StandardMaterial3D_303wj")
-
-[node name="AimPoint" type="Node3D" parent="TestMap/EnemyPath/TestEnemy"]
-transform = Transform3D(1, 0, 2.84217e-14, 0, 1, 0, -2.84217e-14, 0, 1, 4.76837e-07, 0, -0.299999)
+[node name="TestTank" parent="TestMap/EnemyPath" index="0" instance=ExtResource("6_4kv1x")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+speed = 5.0
 
 [editable path="CannonTurret"]
 [editable path="LaserTurret"]
