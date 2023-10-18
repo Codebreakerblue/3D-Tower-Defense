@@ -17,7 +17,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="TurretShroud" parent="TurretHead" instance=ExtResource("4_aislu")]
 
+[node name="BarrelEnd" type="Node3D" parent="TurretHead"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.881748)
+
 [node name="AimLerp3DComponent" parent="TurretHead" node_paths=PackedStringArray("target_provider") instance=ExtResource("5_78rv0")]
 target_provider = NodePath("../..")
 
-[node name="FireComponent" parent="TurretHead" instance=ExtResource("6_q1r2n")]
+[node name="FireComponent" parent="TurretHead" node_paths=PackedStringArray("target_provider", "fire_point") instance=ExtResource("6_q1r2n")]
+target_provider = NodePath("../..")
+fire_point = NodePath("..")

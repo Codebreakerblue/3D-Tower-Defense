@@ -82,23 +82,14 @@ surface_material_override/0 = SubResource("StandardMaterial3D_303wj")
 [node name="CannonTurret" parent="." instance=ExtResource("1_ug5vu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.01003, 0, -8.57579)
 
-[node name="FireComponent" parent="CannonTurret/TurretHead" index="2" node_paths=PackedStringArray("target_provider")]
-projectile_scene_1 = ExtResource("3_yluun")
-target_provider = NodePath("../..")
-
 [node name="LaserTurret" parent="." instance=ExtResource("3_f2vmr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -9)
 
-[node name="FireComponent" parent="LaserTurret/TurretHead" index="3" node_paths=PackedStringArray("target_provider")]
+[node name="FireComponent" parent="LaserTurret/TurretHead" index="4"]
 projectile_scene_1 = ExtResource("3_yluun")
-target_provider = NodePath("../..")
 
 [node name="GatlingTurret" parent="." instance=ExtResource("4_1uelm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 5)
-
-[node name="FireComponent" parent="GatlingTurret/TurretHead" index="3" node_paths=PackedStringArray("target_provider")]
-projectile_scene_1 = ExtResource("3_yluun")
-target_provider = NodePath("../..")
 
 [node name="TestMap" parent="." instance=ExtResource("5_3vek3")]
 
