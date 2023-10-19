@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bv0u5jewnt5jr"]
+
+[ext_resource type="Script" path="res://Scenes/MainScenes/test_target.gd" id="1_c4jfu"]
+[ext_resource type="PackedScene" uid="uid://cg022hhyjsj73" path="res://Scenes/Enemies/TestTank/test_tank_geo.tscn" id="2_nc20y"]
+[ext_resource type="PackedScene" uid="uid://c35hgvxblnc7s" path="res://Resources/Components/healthbar_3d_component.tscn" id="3_j0j88"]
+[ext_resource type="PackedScene" uid="uid://c7kfe401jfqgj" path="res://Resources/Components/health_component.tscn" id="4_ggmvm"]
+
+[node name="TestTank" type="PathFollow3D"]
+script = ExtResource("1_c4jfu")
+
+[node name="TestTankGeo" parent="." instance=ExtResource("2_nc20y")]
+
+[node name="HealthBar3DComponent" parent="." instance=ExtResource("3_j0j88")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.910202, 0)
+value = 0.98
+empty_color = Color(1, 0.101961, 0.101961, 1)
+full_color = Color(0.298039, 0.709804, 0.298039, 1)
+outline_color = Color(0.278431, 0.278431, 0.278431, 1)
+outline_size = 0.0
+size = Vector3(2, 0.1, 0.05)
+
+[node name="HealthComponent" parent="." node_paths=PackedStringArray("healthbar") instance=ExtResource("4_ggmvm")]
+max_health = 100.0
+health = 30.0
+healthbar = NodePath("../HealthBar3DComponent")

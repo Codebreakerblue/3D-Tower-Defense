@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c35hgvxblnc7s"]
+
+[ext_resource type="Script" path="res://Resources/Components/healthbar_3d_component.gd" id="1_fonmu"]
+
+[node name="HealthBar3DComponent" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.381166, 0)
+script = ExtResource("1_fonmu")
