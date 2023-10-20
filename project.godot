@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="3D Tower Defense"
-run/main_scene="res://Scenes/MainScenes/game_scene.tscn"
+run/main_scene="res://Scenes/MainScenes/scene_handler.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameData="*res://Singletons/game_data.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gd-blender-3d-shortcuts/plugin.cfg")
 
 [filesystem]
 

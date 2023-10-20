@@ -6,13 +6,17 @@ var ready_to_fire = true
 
 #Set using inspector
 # TODO get these variables from game_data.gd
+
+var gamedata = "GameData"
+var turret_type
+
 @export var rof = .1
 @export var projectile_scene_1 : PackedScene	#what projectile to shoot
 @export var target_provider : Node	#what node is sending target information
 @export var projectile_life = 1 #how long in seconds projectiles last before despawning
 @onready var fire_point = get_parent()	#what point to spawn projectiles on
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if target == null:
 		if target_provider.target != null:
 			assign_aimed_target()
