@@ -5,6 +5,7 @@ var target
 var ready_to_fire = true
 
 #Set using inspector
+# TODO get these variables from game_data.gd
 @export var rof = .1
 @export var projectile_scene_1 : PackedScene	#what projectile to shoot
 @export var target_provider : Node	#what node is sending target information

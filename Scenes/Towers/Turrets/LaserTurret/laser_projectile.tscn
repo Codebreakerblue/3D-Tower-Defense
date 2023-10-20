@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b3cg66ixg2klc"]
 
-[ext_resource type="PackedScene" uid="uid://caqbnwk7vgw4g" path="res://Resources/Components/projectile_component.tscn" id="1_rlvf7"]
+[ext_resource type="PackedScene" uid="uid://caqbnwk7vgw4g" path="res://Resources/Components/projectile_component/projectile_component.tscn" id="1_rlvf7"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_14d1s"]
 

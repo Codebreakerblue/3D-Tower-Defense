@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct0f74wo2kujs"]
+
+[ext_resource type="Script" path="res://Resources/Components/shoot_projectile_component/shoot_projectile_component.gd" id="1_cr71v"]
+
+[node name="ShootProjectileComponent" type="Node"]
+script = ExtResource("1_cr71v")

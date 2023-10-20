@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://qktdpflgnkt4"]
 
-[ext_resource type="Script" path="res://Resources/Components/aim_lerp3D_component.gd" id="1_wgthc"]
+[ext_resource type="Script" path="res://Resources/Components/aim_lerp3D_component/aim_lerp3D_component.gd" id="1_wgthc"]
 
 [node name="AimLerp3DComponent" type="Node"]
 editor_description = "Component that aims parent at provided target."

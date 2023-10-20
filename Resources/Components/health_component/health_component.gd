@@ -6,11 +6,14 @@ extends Node
 @export var healthbar: Node
 @export var hitbox: Node
 
+
 func _ready():
-	recieve_damage(10)
-	
-	
+#	recieve_damage(10)
+	pass
+
+ 
 func recieve_damage(damage):
 	health -= damage
 	if healthbar != null:
 		healthbar.update_health_bar(health)
+

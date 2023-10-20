@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://cnmxpqakfr0cf" path="res://Scenes/Towers/Turrets/Universal/turret_base.tscn" id="1_d7wku"]
 [ext_resource type="Script" path="res://Scenes/Towers/Turrets/Universal/turret.gd" id="1_rii4o"]
 [ext_resource type="PackedScene" uid="uid://w6qf0fgvwy57" path="res://Scenes/Towers/Turrets/CannonTurret/cannon_turret_head.tscn" id="2_efvgg"]
-[ext_resource type="PackedScene" uid="uid://qktdpflgnkt4" path="res://Resources/Components/aim_lerp3D_component.tscn" id="4_jb8cq"]
-[ext_resource type="PackedScene" uid="uid://ct0f74wo2kujs" path="res://Resources/Components/fire_component.tscn" id="5_4t7r0"]
+[ext_resource type="PackedScene" uid="uid://qktdpflgnkt4" path="res://Resources/Components/aim_lerp3D_component/aim_lerp3D_component.tscn" id="4_jb8cq"]
+[ext_resource type="PackedScene" uid="uid://ct0f74wo2kujs" path="res://Resources/Components/shoot_projectile_component/shoot_projectile_component.tscn" id="5_4t7r0"]
 [ext_resource type="PackedScene" uid="uid://byo6jfbgao2sp" path="res://Scenes/Towers/Turrets/CannonTurret/cannon_projectile.tscn" id="5_lyx45"]
 
 [node name="CannonTurret" type="Node3D"]

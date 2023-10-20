@@ -1,5 +1,8 @@
 extends Node3D
 
+var turret_type = ""
+
+
 @onready var target = $"../TestMap/EnemyPath/TestTank"
 @onready var aim_component = $TurretHead/AimLerp3DComponent
 @onready var fire_component = $TurretHead/FireComponent
