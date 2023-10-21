@@ -44,7 +44,7 @@ func spawn_projectile(projectile_type):
 	var projectile = projectile_type.instantiate()
 	add_child(projectile)
 	projectile.position = fire_point.global_position
-	projectile.look_at(target.global_position)
+	projectile.rotation = fire_point.global_rotation
 	await get_tree().create_timer(1).timeout
 	projectile.queue_free()
 

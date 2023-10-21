@@ -23,6 +23,7 @@ ambient_light_energy = 0.01
 reflected_light_source = 2
 ssao_enabled = true
 ssil_enabled = true
+glow_enabled = true
 glow_normalized = true
 fog_sun_scatter = 0.09
 volumetric_fog_enabled = true

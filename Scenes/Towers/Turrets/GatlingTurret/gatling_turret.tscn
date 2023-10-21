@@ -20,10 +20,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0)
 [node name="GatlingTurretBarrel" parent="TurretHead" instance=ExtResource("4_2b4kt")]
 script = ExtResource("5_522j2")
 
-[node name="BarrelEnd" type="Node3D" parent="TurretHead"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0525929, 1.21844)
+[node name="FirePoint" type="Node3D" parent="TurretHead"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.0525929, 1.21844)
 
-[node name="ShootProjectileComponent" parent="TurretHead/BarrelEnd" node_paths=PackedStringArray("target_provider") instance=ExtResource("7_1lqos")]
+[node name="ShootProjectileComponent" parent="TurretHead/FirePoint" node_paths=PackedStringArray("target_provider") instance=ExtResource("7_1lqos")]
 rof = 1000
 projectile_scene_1 = ExtResource("7_t7nvg")
 target_provider = NodePath("../../..")

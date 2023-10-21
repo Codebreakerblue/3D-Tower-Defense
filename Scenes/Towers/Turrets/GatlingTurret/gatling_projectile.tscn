@@ -10,7 +10,7 @@ diffuse_mode = 3
 specular_mode = 1
 albedo_color = Color(1, 0.780392, 0.529412, 1)
 emission_enabled = true
-emission = Color(1, 0.733333, 0.431373, 1)
+emission = Color(1, 0.72549, 0.411765, 1)
 emission_energy_multiplier = 100.0
 backlight_enabled = true
 backlight = Color(1, 1, 1, 1)
@@ -18,7 +18,7 @@ backlight = Color(1, 1, 1, 1)
 [node name="GatlingProjectile" type="Node3D"]
 
 [node name="ProjectileComponent" parent="." instance=ExtResource("1_8yncn")]
-speed = 100
+speed = 75
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, -0.2)

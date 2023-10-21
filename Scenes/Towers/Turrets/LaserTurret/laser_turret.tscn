@@ -21,18 +21,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 [node name="AimLerp3DComponent" parent="TurretHead" node_paths=PackedStringArray("target_provider") instance=ExtResource("5_78rv0")]
 target_provider = NodePath("../..")
 
-[node name="BarrelEnd" type="Node3D" parent="TurretHead"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.129419, 0, 0.881748)
+[node name="FirePoint" type="Node3D" parent="TurretHead"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.129419, 0, 0.881748)
 
-[node name="FireComponent" parent="TurretHead/BarrelEnd" node_paths=PackedStringArray("target_provider") instance=ExtResource("6_q1r2n")]
+[node name="FireComponent" parent="TurretHead/FirePoint" node_paths=PackedStringArray("target_provider") instance=ExtResource("6_q1r2n")]
 rof = 120
 projectile_scene_1 = ExtResource("7_a8n1d")
 target_provider = NodePath("../../..")
 
-[node name="BarrelEnd2" type="Node3D" parent="TurretHead"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.139373, 0, 0.86113)
+[node name="FirePoint2" type="Node3D" parent="TurretHead"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.139373, 0, 0.86113)
 
-[node name="FireComponent" parent="TurretHead/BarrelEnd2" node_paths=PackedStringArray("target_provider") instance=ExtResource("6_q1r2n")]
+[node name="FireComponent" parent="TurretHead/FirePoint2" node_paths=PackedStringArray("target_provider") instance=ExtResource("6_q1r2n")]
 rof = 120
 projectile_scene_1 = ExtResource("7_a8n1d")
 target_provider = NodePath("../../..")
