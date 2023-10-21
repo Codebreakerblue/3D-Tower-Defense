@@ -23,13 +23,12 @@ ambient_light_energy = 0.01
 reflected_light_source = 2
 ssao_enabled = true
 ssil_enabled = true
-glow_enabled = true
 glow_normalized = true
-glow_mix = 0.366
-glow_blend_mode = 4
 fog_sun_scatter = 0.09
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.02
+adjustment_contrast = 1.17
+adjustment_saturation = 1.35
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_omgaq"]
 size = Vector2(100, 100)
@@ -42,7 +41,7 @@ size = Vector2(100, 100)
 transform = Transform3D(0.707107, -0.353553, 0.612373, 0, 0.866026, 0.499999, -0.707107, -0.353553, 0.612373, 22.1793, 11, 22.1793)
 projection = 1
 current = true
-fov = 25.0
+fov = 23.8
 size = 17.0
 near = 0.001
 far = 500.0

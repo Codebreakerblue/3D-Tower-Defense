@@ -24,6 +24,7 @@ script = ExtResource("5_522j2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0525929, 1.21844)
 
 [node name="ShootProjectileComponent" parent="TurretHead/BarrelEnd" node_paths=PackedStringArray("target_provider") instance=ExtResource("7_1lqos")]
+rof = 1000
 projectile_scene_1 = ExtResource("7_t7nvg")
 target_provider = NodePath("../../..")
 

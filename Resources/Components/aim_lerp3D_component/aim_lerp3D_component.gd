@@ -19,7 +19,7 @@ func _physics_process(delta):
 	
 func lerped_aim():
 	if target == null: 
-		pass
+		return
 	
 	var target_position = target.global_position
 	var aim_tween = create_tween()

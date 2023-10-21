@@ -8,13 +8,18 @@ var ready_to_fire = true
 # TODO get these variables from game_data.gd
 
 var gamedata = "GameData"
-var turret_type
 
-@export var rof = .1
+@export var rof = 60
 @export var projectile_scene_1 : PackedScene	#what projectile to shoot
 @export var target_provider : Node	#what node is sending target information
 @export var projectile_life = 1 #how long in seconds projectiles last before despawning
+
 @onready var fire_point = get_parent()	#what point to spawn projectiles on
+@onready var turret_type = $"../../..".turret_type
+
+func _ready():
+#	print(turret_type)
+	pass
 
 func _physics_process(_delta):
 	if target == null:
@@ -25,10 +30,13 @@ func _physics_process(_delta):
 
 
 func fire():
+	if target == null:
+		return
+	
 	if ready_to_fire:
 		ready_to_fire = false
 		spawn_projectile(projectile_scene_1)
-		await get_tree().create_timer(rof).timeout
+		await get_tree().create_timer(60.0/rof).timeout
 		ready_to_fire = true
 
 

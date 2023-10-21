@@ -19,7 +19,6 @@ transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0.9, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0854934, 0.967426)
 
 [node name="FireComponent" parent="TurretHead/BarrelEnd" node_paths=PackedStringArray("target_provider") instance=ExtResource("5_4t7r0")]
-rof = 0.5
 projectile_scene_1 = ExtResource("5_lyx45")
 target_provider = NodePath("../../..")
 
