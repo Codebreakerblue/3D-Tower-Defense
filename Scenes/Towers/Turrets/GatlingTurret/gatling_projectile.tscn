@@ -3,7 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://caqbnwk7vgw4g" path="res://Resources/Components/projectile_component/projectile_component.tscn" id="1_8yncn"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_oq0tn"]
-radius = 0.2
+radius = 0.1
+height = 3.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dsglp"]
 diffuse_mode = 3
@@ -21,7 +22,7 @@ backlight = Color(1, 1, 1, 1)
 speed = 75
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, -0.2)
+transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, -0.3)
 cast_shadow = 0
 mesh = SubResource("CapsuleMesh_oq0tn")
 surface_material_override/0 = SubResource("StandardMaterial3D_dsglp")
