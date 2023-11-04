@@ -4,7 +4,7 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_oq0tn"]
 radius = 0.1
-height = 3.0
+height = 16.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dsglp"]
 diffuse_mode = 3
@@ -19,10 +19,10 @@ backlight = Color(1, 1, 1, 1)
 [node name="GatlingProjectile" type="Node3D"]
 
 [node name="ProjectileComponent" parent="." instance=ExtResource("1_8yncn")]
-speed = 75
+speed = 80
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, -0.3)
+transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, -1.6)
 cast_shadow = 0
 mesh = SubResource("CapsuleMesh_oq0tn")
 surface_material_override/0 = SubResource("StandardMaterial3D_dsglp")

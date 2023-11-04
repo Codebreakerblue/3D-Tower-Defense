@@ -27,7 +27,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.0
 rof = 3000
 projectile_scene_1 = ExtResource("7_t7nvg")
 target_provider = NodePath("../../..")
-aim_inaccuracy = 2
+aim_inaccuracy = 1.0
 
 [node name="AimLerp3DComponent" parent="TurretHead" node_paths=PackedStringArray("target_provider") instance=ExtResource("6_b1yqn")]
 target_provider = NodePath("../..")
